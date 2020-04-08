@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- FORM -->
+
+		<record id="cap_sale_order_importtech_view_form" model="ir.ui.view">
+			<field name="name">cap_sale_order_importtech_view_form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="priority" eval="200"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='invoice_status']" position="after">
+					<field name="import_old_ref_payment" readonly="1"/>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>
