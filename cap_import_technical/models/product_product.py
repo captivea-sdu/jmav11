@@ -10,7 +10,7 @@ class ProductProduct(models.Model):
     
     @api.model
     def cron_import_ref_product(self):
-        print "cron_import_ref_product"
+        #print "cron_import_ref_product"
         # TRANSFERT IMPORT REF IN REF
         product_ids = self.env['product.product'].search([('import_ref','!=',False),('|'),('active','=',True),('active','=',False)])
         for product in product_ids:
